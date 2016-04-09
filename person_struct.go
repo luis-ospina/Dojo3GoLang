@@ -9,7 +9,9 @@ type Persona struct{
 
 func main() {
 	luis := Persona{"Luis David",1.80}
-
-	fmt.Printf("%s corriendo\n",luis.nombre)
+	luis.correr()
 }
 
+func (person *Persona)correr(){
+	fmt.Printf("%s corriendo\n",person.nombre)
+}
